@@ -1,0 +1,6 @@
+Faker==40.11.0
+numpy==2.3.2
+pandas==2.3.2
+tzdata==2025.2
+plotly==6.3.0
+streamlit==1.48.1

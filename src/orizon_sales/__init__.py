@@ -1,0 +1,1 @@
+"""Ferramentas de inteligência comercial da Orizon."""

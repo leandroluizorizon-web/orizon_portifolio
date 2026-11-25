@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orizon-sales"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+exploracao = ["scipy==1.16.1"]
+teste = ["pytest==8.4.1"]
+
+[project.scripts]
+orizon-gerar = "orizon_sales.geracao:main"
+orizon-diagnosticar = "orizon_sales.qualidade:main"
+
+orizon-tratar = "orizon_sales.tratamento:main"
+
+orizon-explorar = "orizon_sales.exploracao:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
